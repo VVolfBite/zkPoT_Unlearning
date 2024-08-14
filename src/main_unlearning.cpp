@@ -1904,6 +1904,31 @@ void check_dataset(int batch, int input_dim){
 	//return prove_input_commit(gkr_data, r, batch,  input_dim*input_dim);
 }
 
+vector<proof> proof_dataset_unlearning(int batch, int input_dim){
+	vector<vector<F>> X(batch);
+	for(int i = 0; i < batch; i++){
+		X[i].resize(input_dim*input_dim);
+		for(int j = 0; j < X[i].size(); j++){
+			X[i][j] = random();//.setByCSPRNG();
+		}
+	}
+	vector<vector<vector<F>>> data;
+	for(int i = 0; i < batch; i++){
+		for(int j = 0; j  < X[i].size(); j++){
+			mimc_hash(X[i][j],current_randomness);
+		}
+		for(int j = 0; j  < 16; j++){
+			mimc_hash(current_randomness,current_randomness);
+		}
+	}
+	vector<F> input = x_transcript;
+	x_transcript.clear();
+	vector<proof> P = mimc_sumcheck(input);
+	return P
+	///Transcript.insert(Transcript.end(),P.begin(),P.end());
+	//return prove_input_commit(gkr_data, r, batch,  input_dim*input_dim);
+}
+
 
 
 void get_witness(struct convolutional_network net, vector<F> &witness){

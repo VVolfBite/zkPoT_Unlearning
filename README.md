@@ -1,4 +1,7 @@
-# Kaizen
+# zkPoT Unlearning
+
+Installation: 
+
 To build zkPoT, first decompress 3rd.zip. Then make ./build.sh executable by using:
 > chmod +x build.sh
 
@@ -12,3 +15,13 @@ For zkPoT run one of the scripts given by running:
 Each script calls ./main {MODEL} {Number of batches} {Number of input filters} {Number of levels of SHA hashes} {PC type}
 
 For {Number of levels of SHA hashes}, -1 corresponds to no SHA hashes. For {PC type}, 1 corresponds to Orion and 2 to Virgo.
+
+Papers: 
+
+Zero-Knowledge Proofs of Training for Deep Neural Networks (Kaizen) : https://eprint.iacr.org/2024/162.pdf
+
+
+
+TODO:
+
+
