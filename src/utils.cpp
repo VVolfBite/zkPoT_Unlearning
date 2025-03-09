@@ -19,6 +19,7 @@ F chain_hash(F previous_r, vector<F> values){
     return previous_r;
 }
 
+// 将数组重塑为下一个二次幂，用0填充扩展的部分
 void pad_vector(vector<F> &v){
     size_t size = v.size();
     if(1ULL<<((int)log2(size)) == v.size())return;
@@ -562,7 +563,7 @@ vector<F> lookup_prod(vector<vector<F>> tables, F num){
         int idx = 0;
 
         for(int j = 0; j < (int)log2(tables[i].size()); j++){
-            if(buff[n - counter - 1] == '1'){
+            if(num.getBit(n - counter - 1) == '1'){
                 idx += 1<<j;
                 monomials[i][j] = F(1);
             }
@@ -624,7 +625,7 @@ F lookup(vector<vector<F>> tables, F num){
         int idx = 0;
 
         for(int j = 0; j < (int)log2(tables[i].size()); j++){
-            if(buff[n - counter - 1] == '1'){
+            if(num.getBit(n - counter - 1) == '1'){
                 idx += 1<<j;
                 monomials[i][j] = F(1);
             }

@@ -220,7 +220,7 @@ void my_fft(vector<F> &arr, int logn, bool flag) {
 }
 
 
-
+// 
 void commit_matrix(vector<vector<F>> &encoded_matrix,int bit_row,int bit_col, commitment &com, int level){
     vector<vector<__hhash_digest>> buff;//(poly.size());
     vector<vector<F>> _buff;
@@ -243,6 +243,7 @@ void commit_matrix(vector<vector<F>> &encoded_matrix,int bit_row,int bit_col, co
                 _buff[i].resize((poly_size*2)/(1ULL<<(i)));
             }
         }else{
+            // Through here
             buff.resize(level);    
             _buff.resize((int)log2(poly_size) - level + 1);
             buff[0].resize(poly_size);
@@ -276,6 +277,7 @@ void commit_matrix(vector<vector<F>> &encoded_matrix,int bit_row,int bit_col, co
                 }
             }    
         }else{
+            // Through here
             for(int i = 0; i < 1ULL<<(bit_row+1); i++){
                 for(int j = 0; j < (1ULL<<(bit_col))/2; j++){
                     

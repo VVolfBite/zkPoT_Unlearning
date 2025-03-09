@@ -3,6 +3,9 @@
 #include "MLP.h"
 #include "utils.hpp"
 #include "CNN.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
 #define LENET 1
 #define VGG 2
 #define TEST 3
@@ -442,23 +445,6 @@ struct avg_layer avg(vector<F> input , int chout,int w, int n, int window,int po
 
 struct convolution_layer conv(vector<vector<vector<vector<F>>>> input,vector<vector<vector<vector<F>>>> &real_input, vector<vector<vector<vector<F>>>> W, bool avg){
 	struct convolution_layer conv_data;
-		
-	//vector<vector<vector<vector<vector<F>>>>> W;
-	//W = add_filter(W,fchout,fchin,fw);
-	
-	
-	//conv_data.real_X = real_input;
-	
-	// TESTS
-	/*
-	vector<vector<vector<vector<F>>>> U;
-	for(int i = 0; i < batch; i++){
-		U.push_back(convolution(input[i],W));
-	}
-	*/
-	
-	////////////
-	//vector<vector<vector<F>>> U = convolution(input,W[0]);
 	
 	for(int i = 0; i < W.size(); i++){
 		for(int j = 0; j < W[0].size(); j++){
@@ -523,22 +509,6 @@ struct convolution_layer conv(vector<vector<vector<vector<F>>>> input,vector<vec
 	}
 
 	int n = input[0][0][0].size();
-	
-	//TESTS
-	/*
-	vector<vector<F>> u;
-	vector<vector<vector<F>>> _U;
-	for(int i = 0; i < U.size(); i++){
-		for(int j = 0; j < U[i].size(); j++){
-			u.push_back(index_u(U[i][j],n));
-			_U.push_back(U[i][j]);
-		}
-	}
-	*/
-	
-	
-	
-	//////////
 
 	vector<vector<F>> u2;
 	
@@ -555,71 +525,6 @@ struct convolution_layer conv(vector<vector<vector<vector<F>>>> input,vector<vec
 		v.clear();
 	}
 	
-	// TESTS
-	/*
-	printf("Real input : %d,%d,%d W : %d,%d,%d \n", real_input.size(),real_input[0].size(),input[0][0].size(),
-	W.size(),W[0].size(),W[0][0].size());
-
-	for(int k = 0; k < batch*W.size(); k++){
-		for(int i = 0; i < n - W[0][0].size() +1; i++){
-			for(int j = 0; j < n - W[0][0].size() +1; j++){
-				if(_U[k][i][j] != conv_data.U[k][n*n - 1 - i*n - j]){
-				//if(u[k][n*n - 1 - i*n - j] != u2[k][n*n - 1 - i*n - j]){
-					char buff[256];
-					conv_data.U[k][n*n - 1 - i*n - j].getStr(buff,256,10);
-					printf("%s , ", buff);
-					_U[k][i][j].getStr(buff,256,10);
-					printf("%s\n",buff );
-					printf("Error in conv(), %d %d,%d\n",k,i,j);
-					exit(1);
-				}
-			}
-		}
-	}
-	printf("OK2 \n");
-	
-	vector<vector<vector<F>>> test;
-	for(int k = 0; k < batch; k++){
-		test = convolution(real_input[k],W);
-		for(int l = 0; l < W.size(); l++){
-				for(int i = 0; i < real_input[0][0][0].size() - W[0][0].size() +1; i++){
-					for(int j = 0; j < real_input[0][0][0].size() - W[0][0].size() +1; j++){
-						if(test[l][i][j] != conv_data.U[k*W.size() + l][n*n - 1 - i*n - j]){
-						//if(u[k][n*n - 1 - i*n - j] != u2[k][n*n - 1 - i*n - j]){
-							char buff[256];
-							conv_data.U[k][n*n - 1 - i*n - j].getStr(buff,256,10);
-							printf("%s , ", buff);
-							_U[k][i][j].getStr(buff,256,10);
-							printf("%s\n",buff );
-							printf("Error in conv() 2, %d %d,%d\n",k,i,j);
-							exit(1);
-						}
-					}
-				}
-		}
-	}
-	vector<vector<vector<vector<F>>>> real_U;
-	for(int i = 0; i < batch; i++){
-		//if(avg){
-	 	//	real_U.push_back(avg_pool(convolution(real_input[i],W),2));
-		//}
-		//else{
-			real_U.push_back(convolution(real_input[i],W));	
-		//}
-	}
-	//for(int i = 0; i < batch; i++){
-	//	real_U.push_back(convolution(real_input[i],W));	
-	//}
-	real_input = real_U;
-
-	*/
-	
-
-	
-	/////////
-	
-
-
 	conv_data.Batch_size = batch;
 	conv_data.chout = W.size();
 	conv_data.chin = W[0].size();
@@ -636,35 +541,6 @@ struct convolution_layer conv(vector<vector<vector<vector<F>>>> input,vector<vec
 		}
 	}
 	
-	//conv_data.Out = conv_data.U;
-	
-	/*
-	if(!avg){
-		conv_data.Out = _flatten_layer(conv_data.U,n);
-	}else{
-	}
-	*/
-	/*
-	if(avg){
-		vector<vector<vector<F>>> r = avg_pool_2(conv_data.U,conv_data.chout,conv_data.n - conv_data.w + 1,conv_data.n,conv_data.window);
-		conv_data.Out = r[0];
-		conv_data.Sum = r[1];
-		conv_data.Remainder = r[2];
-	}else{
-		conv_data.Out = _flatten_layer(conv_data.U,n);
-	}
-	
-	int d = (conv_data.n - conv_data.w + 1);
-	if(avg){
-		d = d/2;
-	}
-	int pad_window_bits = (int)log2(d);
-	if(1<<pad_window_bits != d){
-		pad_window_bits++;
-	}
-	
-	conv_data.padded_w = 1<<pad_window_bits;
-	*/
 	return conv_data;
 }
 
@@ -902,16 +778,16 @@ void check_relu(vector<vector<vector<vector<F>>>> &input){
 }
 
 struct convolutional_network feed_forward(vector<vector<vector<vector<F>>>> &X, struct convolutional_network net, int channels){
-	vector<vector<vector<vector<F>>>> input;
-	if(model == VGG){
-		input = init_input(64,channels);
-	}
-	else if(model == AlexNet || model == mAlexNet){
-		input = init_input(64,channels);
-	}	
-	else{
-		input = init_input(32,channels);
-	}
+	vector<vector<vector<vector<F>>>> input = X;
+	// if(model == VGG){
+	// 	input = init_input(64,channels);
+	// }
+	// else if(model == AlexNet || model == mAlexNet){
+	// 	input = init_input(64,channels);
+	// }	
+	// else{
+	// 	input = init_input(32,channels);
+	// }
 	
 	vector<vector<vector<vector<F>>>> Z_conv;
 	vector<vector<F>> Z(batch);
@@ -1662,4 +1538,47 @@ struct convolutional_network back_propagation( struct convolutional_network net)
 	}
 	return net;
 
+}
+
+
+// 读取 MNIST CSV 并转换为 4D `vector<vector<vector<vector<F>>>>` images + `vector<F>` labels
+void read_mnist_csv(const string& filename, 
+                    vector<vector<vector<vector<F>>>>& images, 
+                    vector<F>& labels) {
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cerr << "无法打开文件: " << filename << endl;
+        return;
+    }
+
+    string line;
+
+    // 跳过 CSV 头部
+    getline(file, line);
+
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string value;
+        
+        // 32x32 图像（C=1, H=32, W=32），默认填充 0
+        vector<vector<vector<F>>> image(1, vector<vector<F>>(32, vector<F>(32, F(0))));  
+
+        // 读取 label，并转换为 F 类型
+        getline(ss, value, ',');
+        labels.push_back(F(stoi(value)));  // F 类型存储 label
+
+        // 读取 28×28 像素值，并填充到 32×32 的中心
+        for (int i = 0; i < 28; i++) {
+            for (int j = 0; j < 28; j++) {
+                getline(ss, value, ',');
+                int pixel_value = stoi(value);  // 0~255
+                F field_element = F(pixel_value);    // 转换为有限域元素
+                image[0][i + 2][j + 2] = field_element;  // 放入 (C=1, H, W) 的中心
+            }
+        }
+
+        images.push_back(image);  // 存入最终数据
+    }
+
+    file.close();
 }
