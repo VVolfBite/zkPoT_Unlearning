@@ -777,8 +777,8 @@ void check_relu(vector<vector<vector<vector<F>>>> &input){
 	}
 }
 
-struct convolutional_network feed_forward(vector<vector<vector<vector<F>>>> &X, struct convolutional_network net, int channels){
-	vector<vector<vector<vector<F>>>> input = X;
+struct convolutional_network feed_forward(vector<vector<vector<vector<F>>>> &input_batch, struct convolutional_network net, int channels){
+	vector<vector<vector<vector<F>>>> input = input_batch;
 	// if(model == VGG){
 	// 	input = init_input(64,channels);
 	// }
@@ -793,7 +793,7 @@ struct convolutional_network feed_forward(vector<vector<vector<vector<F>>>> &X, 
 	vector<vector<F>> Z(batch);
 	vector<vector<vector<vector<F>>>> real_input;
 	real_input = input;
-	X = input;
+	input_batch = input;
 	struct convolution_layer conv_data;
 	struct fully_connected_layer mlp_data;
 	struct relu_layer relu_data;
@@ -803,7 +803,7 @@ struct convolutional_network feed_forward(vector<vector<vector<vector<F>>>> &X, 
 	
 	for(int i = 0; i < net.Filters.size(); i++){
 		if(i == 0){
-			conv_data = conv(X,real_input,net.Filters[i],true);
+			conv_data = conv(input_batch,real_input,net.Filters[i],true);
 			
 			conv_data.idx = i;
 			net.convolutions.push_back(conv_data);

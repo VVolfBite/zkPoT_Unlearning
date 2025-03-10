@@ -2712,24 +2712,16 @@ int main(int argc, char *argv[])
 	Commitment_hash = 1;
 	levels = 1;
 
-	// arr.clear();
-
 	int input_dim;
 
-	char buff[257];
-	vector<vector<vector<vector<F>>>> X;
-	vector<F> r;
 
 	string path = "/home/vvolfbite/Documents/Mnist_CSV/mnist_train.csv";
 	vector<vector<vector<vector<F>>>> images;
 	vector<F> labels;
 	read_mnist_csv(path, images, labels);
 
-	// 设置 batch_size 为 32，只传一次
-	int batch_size = 32; // 每次只传入32张图片
-
-	// 检查是否有足够的数据
-	// 创建当前 batch 的 images 和 labels
+	// 设置 batch_size 为 32
+	int batch_size = 32;
 	vector<vector<vector<vector<F>>>> batch_images;
 	vector<F> batch_labels;
 
@@ -2740,17 +2732,14 @@ int main(int argc, char *argv[])
 		batch_labels.push_back(labels[i]);
 	}
 
+	// 读取 MNIST 数据集测试
 	// cout << "读取到 " << images.size() << " 张图片。" << endl;
-
-	// // 测试输出前 4 张图片
 	// if (!images.empty() && !labels.empty())
 	// {
 	// 	int num_images_to_print = min(4, (int)images.size()); // 确保不超出数据范围
-
 	// 	for (int img_idx = 0; img_idx < num_images_to_print; img_idx++)
 	// 	{
 	// 		cout << "第 " << img_idx + 1 << " 张图片的标签: " << labels[img_idx].real << endl;
-
 	// 		for (int i = 0; i < 28; i++)
 	// 		{ // 28x28 图片
 	// 			for (int j = 0; j < 28; j++)

@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vvolfbite/Documents/zkPoT_Unlearning/3rd/mcl/src/asm/bint-x64-amd64.s
+
+/home/vvolfbite/Documents/zkPoT_Unlearning/3rd/mcl/src/asm/x86-64.s
+
