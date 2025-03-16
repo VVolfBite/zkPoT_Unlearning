@@ -445,7 +445,7 @@ struct avg_layer avg(vector<F> input , int chout,int w, int n, int window,int po
 
 struct convolution_layer conv(vector<vector<vector<vector<F>>>> input,vector<vector<vector<vector<F>>>> &real_input, vector<vector<vector<vector<F>>>> W, bool avg){
 	struct convolution_layer conv_data;
-	
+	// W : current layer filters
 	for(int i = 0; i < W.size(); i++){
 		for(int j = 0; j < W[0].size(); j++){
 			conv_data.W.push_back(index_w(W[i][j],input[0][0].size(),input[0][0].size()));
@@ -890,10 +890,12 @@ struct convolutional_network feed_forward(vector<vector<vector<vector<F>>>> &inp
 		int w = conv_data.padded_w;
 		
 	}
-	
+	// Z is the feature map [batch * 1  * 1 * 128]
+
 	// Second phase : Fully connected layers
 	for(int i = 0; i < net.Weights.size(); i++){
 		mlp_data = _fully_connected_layer(Z, net.Weights[i]);
+		// mlp_data is the predict result [batch * 16]
 		net.fully_connected.push_back(mlp_data);
 		if(i < net.Weights.size()-1){
 			relu_data = _relu_layer(convert2vector(mlp_data.Z_new));
