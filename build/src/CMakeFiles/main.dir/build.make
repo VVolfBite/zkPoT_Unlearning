@@ -237,10 +237,24 @@ src/CMakeFiles/main.dir/main_unlearning.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main_unlearning.cpp.s"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vvolfbite/Documents/zkPoT_Unlearning/src/main_unlearning.cpp -o CMakeFiles/main.dir/main_unlearning.cpp.s
 
+src/CMakeFiles/main.dir/main_x.cpp.o: src/CMakeFiles/main.dir/flags.make
+src/CMakeFiles/main.dir/main_x.cpp.o: ../src/main_x.cpp
+src/CMakeFiles/main.dir/main_x.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/main.dir/main_x.cpp.o"
+	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/main_x.cpp.o -MF CMakeFiles/main.dir/main_x.cpp.o.d -o CMakeFiles/main.dir/main_x.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/main_x.cpp
+
+src/CMakeFiles/main.dir/main_x.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main_x.cpp.i"
+	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vvolfbite/Documents/zkPoT_Unlearning/src/main_x.cpp > CMakeFiles/main.dir/main_x.cpp.i
+
+src/CMakeFiles/main.dir/main_x.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main_x.cpp.s"
+	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vvolfbite/Documents/zkPoT_Unlearning/src/main_x.cpp -o CMakeFiles/main.dir/main_x.cpp.s
+
 src/CMakeFiles/main.dir/merkle_tree.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/merkle_tree.cpp.o: ../src/merkle_tree.cpp
 src/CMakeFiles/main.dir/merkle_tree.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/main.dir/merkle_tree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/main.dir/merkle_tree.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/merkle_tree.cpp.o -MF CMakeFiles/main.dir/merkle_tree.cpp.o.d -o CMakeFiles/main.dir/merkle_tree.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/merkle_tree.cpp
 
 src/CMakeFiles/main.dir/merkle_tree.cpp.i: cmake_force
@@ -254,7 +268,7 @@ src/CMakeFiles/main.dir/merkle_tree.cpp.s: cmake_force
 src/CMakeFiles/main.dir/mimc.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/mimc.cpp.o: ../src/mimc.cpp
 src/CMakeFiles/main.dir/mimc.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/main.dir/mimc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/main.dir/mimc.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/mimc.cpp.o -MF CMakeFiles/main.dir/mimc.cpp.o.d -o CMakeFiles/main.dir/mimc.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/mimc.cpp
 
 src/CMakeFiles/main.dir/mimc.cpp.i: cmake_force
@@ -268,7 +282,7 @@ src/CMakeFiles/main.dir/mimc.cpp.s: cmake_force
 src/CMakeFiles/main.dir/pol_verifier.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/pol_verifier.cpp.o: ../src/pol_verifier.cpp
 src/CMakeFiles/main.dir/pol_verifier.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/main.dir/pol_verifier.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/main.dir/pol_verifier.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/pol_verifier.cpp.o -MF CMakeFiles/main.dir/pol_verifier.cpp.o.d -o CMakeFiles/main.dir/pol_verifier.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/pol_verifier.cpp
 
 src/CMakeFiles/main.dir/pol_verifier.cpp.i: cmake_force
@@ -282,7 +296,7 @@ src/CMakeFiles/main.dir/pol_verifier.cpp.s: cmake_force
 src/CMakeFiles/main.dir/poly_commit.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/poly_commit.cpp.o: ../src/poly_commit.cpp
 src/CMakeFiles/main.dir/poly_commit.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/main.dir/poly_commit.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/main.dir/poly_commit.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/poly_commit.cpp.o -MF CMakeFiles/main.dir/poly_commit.cpp.o.d -o CMakeFiles/main.dir/poly_commit.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/poly_commit.cpp
 
 src/CMakeFiles/main.dir/poly_commit.cpp.i: cmake_force
@@ -296,7 +310,7 @@ src/CMakeFiles/main.dir/poly_commit.cpp.s: cmake_force
 src/CMakeFiles/main.dir/polynomial.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/polynomial.cpp.o: ../src/polynomial.cpp
 src/CMakeFiles/main.dir/polynomial.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/main.dir/polynomial.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/main.dir/polynomial.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/polynomial.cpp.o -MF CMakeFiles/main.dir/polynomial.cpp.o.d -o CMakeFiles/main.dir/polynomial.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/polynomial.cpp
 
 src/CMakeFiles/main.dir/polynomial.cpp.i: cmake_force
@@ -310,7 +324,7 @@ src/CMakeFiles/main.dir/polynomial.cpp.s: cmake_force
 src/CMakeFiles/main.dir/prover.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/prover.cpp.o: ../src/prover.cpp
 src/CMakeFiles/main.dir/prover.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/main.dir/prover.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/main.dir/prover.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/prover.cpp.o -MF CMakeFiles/main.dir/prover.cpp.o.d -o CMakeFiles/main.dir/prover.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/prover.cpp
 
 src/CMakeFiles/main.dir/prover.cpp.i: cmake_force
@@ -324,7 +338,7 @@ src/CMakeFiles/main.dir/prover.cpp.s: cmake_force
 src/CMakeFiles/main.dir/quantization.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/quantization.cpp.o: ../src/quantization.cpp
 src/CMakeFiles/main.dir/quantization.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/main.dir/quantization.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/main.dir/quantization.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/quantization.cpp.o -MF CMakeFiles/main.dir/quantization.cpp.o.d -o CMakeFiles/main.dir/quantization.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/quantization.cpp
 
 src/CMakeFiles/main.dir/quantization.cpp.i: cmake_force
@@ -338,7 +352,7 @@ src/CMakeFiles/main.dir/quantization.cpp.s: cmake_force
 src/CMakeFiles/main.dir/timer.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/timer.cpp.o: ../src/timer.cpp
 src/CMakeFiles/main.dir/timer.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/main.dir/timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/main.dir/timer.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/timer.cpp.o -MF CMakeFiles/main.dir/timer.cpp.o.d -o CMakeFiles/main.dir/timer.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/timer.cpp
 
 src/CMakeFiles/main.dir/timer.cpp.i: cmake_force
@@ -352,7 +366,7 @@ src/CMakeFiles/main.dir/timer.cpp.s: cmake_force
 src/CMakeFiles/main.dir/utils.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/utils.cpp.o: ../src/utils.cpp
 src/CMakeFiles/main.dir/utils.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/main.dir/utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/main.dir/utils.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/utils.cpp.o -MF CMakeFiles/main.dir/utils.cpp.o.d -o CMakeFiles/main.dir/utils.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/utils.cpp
 
 src/CMakeFiles/main.dir/utils.cpp.i: cmake_force
@@ -366,7 +380,7 @@ src/CMakeFiles/main.dir/utils.cpp.s: cmake_force
 src/CMakeFiles/main.dir/verifier.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/verifier.cpp.o: ../src/verifier.cpp
 src/CMakeFiles/main.dir/verifier.cpp.o: src/CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/main.dir/verifier.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/main.dir/verifier.cpp.o"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/main.dir/verifier.cpp.o -MF CMakeFiles/main.dir/verifier.cpp.o.d -o CMakeFiles/main.dir/verifier.cpp.o -c /home/vvolfbite/Documents/zkPoT_Unlearning/src/verifier.cpp
 
 src/CMakeFiles/main.dir/verifier.cpp.i: cmake_force
@@ -391,6 +405,7 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/lookups.cpp.o" \
 "CMakeFiles/main.dir/main.cpp.o" \
 "CMakeFiles/main.dir/main_unlearning.cpp.o" \
+"CMakeFiles/main.dir/main_x.cpp.o" \
 "CMakeFiles/main.dir/merkle_tree.cpp.o" \
 "CMakeFiles/main.dir/mimc.cpp.o" \
 "CMakeFiles/main.dir/pol_verifier.cpp.o" \
@@ -417,6 +432,7 @@ src/main: src/CMakeFiles/main.dir/linear_code_encode.cpp.o
 src/main: src/CMakeFiles/main.dir/lookups.cpp.o
 src/main: src/CMakeFiles/main.dir/main.cpp.o
 src/main: src/CMakeFiles/main.dir/main_unlearning.cpp.o
+src/main: src/CMakeFiles/main.dir/main_x.cpp.o
 src/main: src/CMakeFiles/main.dir/merkle_tree.cpp.o
 src/main: src/CMakeFiles/main.dir/mimc.cpp.o
 src/main: src/CMakeFiles/main.dir/pol_verifier.cpp.o
@@ -431,7 +447,7 @@ src/main: src/CMakeFiles/main.dir/build.make
 src/main: lib/libmclbn384_256.so.1.73
 src/main: lib/libmcl.so.1.73
 src/main: src/CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vvolfbite/Documents/zkPoT_Unlearning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable main"
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

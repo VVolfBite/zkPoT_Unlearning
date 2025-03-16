@@ -463,6 +463,30 @@ main_unlearning.cpp.s:
 	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main_unlearning.cpp.s
 .PHONY : main_unlearning.cpp.s
 
+main_x.o: main_x.cpp.o
+.PHONY : main_x.o
+
+# target to build an object file
+main_x.cpp.o:
+	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main_x.cpp.o
+.PHONY : main_x.cpp.o
+
+main_x.i: main_x.cpp.i
+.PHONY : main_x.i
+
+# target to preprocess a source file
+main_x.cpp.i:
+	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main_x.cpp.i
+.PHONY : main_x.cpp.i
+
+main_x.s: main_x.cpp.s
+.PHONY : main_x.s
+
+# target to generate assembly for a file
+main_x.cpp.s:
+	cd /home/vvolfbite/Documents/zkPoT_Unlearning/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main_x.cpp.s
+.PHONY : main_x.cpp.s
+
 merkle_tree.o: merkle_tree.cpp.o
 .PHONY : merkle_tree.o
 
@@ -752,6 +776,9 @@ help:
 	@echo "... main_unlearning.o"
 	@echo "... main_unlearning.i"
 	@echo "... main_unlearning.s"
+	@echo "... main_x.o"
+	@echo "... main_x.i"
+	@echo "... main_x.s"
 	@echo "... merkle_tree.o"
 	@echo "... merkle_tree.i"
 	@echo "... merkle_tree.s"

@@ -284,7 +284,7 @@ MCL_USE_LLVM:BOOL=ON
 PKG_CONFIG_ARGN:STRING=
 
 //pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Value Computed by CMake
 ProofOfLearning_BINARY_DIR:STATIC=/home/vvolfbite/Documents/zkPoT_Unlearning/build
@@ -312,6 +312,12 @@ mclbn384_256_LIB_DEPENDS:STATIC=general;mcl::mcl;
 
 //Dependencies for the target
 mclbn384_LIB_DEPENDS:STATIC=general;mcl::mcl;
+
+//Path to a library.
+pkgcfg_lib_PC_GMP_gmp:FILEPATH=/usr/lib/x86_64-linux-gnu/libgmp.so
+
+//Path to a library.
+pkgcfg_lib_PC_GMP_gmpxx:FILEPATH=/usr/lib/x86_64-linux-gnu/libgmpxx.so
 
 
 ########################
@@ -479,7 +485,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding GMP
-FIND_PACKAGE_MESSAGE_DETAILS_GMP:INTERNAL=[/usr/include/x86_64-linux-gnu][/usr/lib/x86_64-linux-gnu/libgmp.so][/usr/include][/usr/lib/x86_64-linux-gnu/libgmpxx.so][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_GMP:INTERNAL=[/usr/include/x86_64-linux-gnu][/usr/lib/x86_64-linux-gnu/libgmp.so][/usr/include][/usr/lib/x86_64-linux-gnu/libgmpxx.so][v6.2.1()]
 //ADVANCED property for variable: GMP_GMPXX_INCLUDE_DIR
 GMP_GMPXX_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GMP_GMPXX_LIBRARY
@@ -491,9 +497,14 @@ GMP_LIBRARY-ADVANCED:INTERNAL=1
 PC_GMP_CFLAGS:INTERNAL=
 PC_GMP_CFLAGS_I:INTERNAL=
 PC_GMP_CFLAGS_OTHER:INTERNAL=
-PC_GMP_FOUND:INTERNAL=
+PC_GMP_FOUND:INTERNAL=1
 PC_GMP_INCLUDEDIR:INTERNAL=
+PC_GMP_INCLUDE_DIRS:INTERNAL=
+PC_GMP_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lgmpxx;-lgmp
+PC_GMP_LDFLAGS_OTHER:INTERNAL=
 PC_GMP_LIBDIR:INTERNAL=
+PC_GMP_LIBRARIES:INTERNAL=gmpxx;gmp
+PC_GMP_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
 PC_GMP_LIBS:INTERNAL=
 PC_GMP_LIBS_L:INTERNAL=
 PC_GMP_LIBS_OTHER:INTERNAL=
@@ -503,15 +514,36 @@ PC_GMP_PREFIX:INTERNAL=
 PC_GMP_STATIC_CFLAGS:INTERNAL=
 PC_GMP_STATIC_CFLAGS_I:INTERNAL=
 PC_GMP_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_GMP_STATIC_INCLUDE_DIRS:INTERNAL=
+PC_GMP_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lgmpxx;-lgmp
+PC_GMP_STATIC_LDFLAGS_OTHER:INTERNAL=
 PC_GMP_STATIC_LIBDIR:INTERNAL=
+PC_GMP_STATIC_LIBRARIES:INTERNAL=gmpxx;gmp
+PC_GMP_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
 PC_GMP_STATIC_LIBS:INTERNAL=
 PC_GMP_STATIC_LIBS_L:INTERNAL=
 PC_GMP_STATIC_LIBS_OTHER:INTERNAL=
 PC_GMP_STATIC_LIBS_PATHS:INTERNAL=
 PC_GMP_VERSION:INTERNAL=
+PC_GMP_gmp_INCLUDEDIR:INTERNAL=/usr/include
+PC_GMP_gmp_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_GMP_gmp_MODULE_NAME:INTERNAL=gmp
+PC_GMP_gmp_PREFIX:INTERNAL=/usr
+PC_GMP_gmp_VERSION:INTERNAL=6.2.1
+PC_GMP_gmpxx_INCLUDEDIR:INTERNAL=/usr/include
+PC_GMP_gmpxx_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_GMP_gmpxx_MODULE_NAME:INTERNAL=gmpxx
+PC_GMP_gmpxx_PREFIX:INTERNAL=/usr
+PC_GMP_gmpxx_VERSION:INTERNAL=6.2.1
 //ADVANCED property for variable: PKG_CONFIG_ARGN
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+__pkg_config_arguments_PC_GMP:INTERNAL=QUIET;gmp;gmpxx
 __pkg_config_checked_PC_GMP:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_GMP_gmp
+pkgcfg_lib_PC_GMP_gmp-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_GMP_gmpxx
+pkgcfg_lib_PC_GMP_gmpxx-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

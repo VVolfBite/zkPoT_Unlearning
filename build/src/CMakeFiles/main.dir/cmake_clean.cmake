@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.o.d"
   "CMakeFiles/main.dir/main_unlearning.cpp.o"
   "CMakeFiles/main.dir/main_unlearning.cpp.o.d"
+  "CMakeFiles/main.dir/main_x.cpp.o"
+  "CMakeFiles/main.dir/main_x.cpp.o.d"
   "CMakeFiles/main.dir/merkle_tree.cpp.o"
   "CMakeFiles/main.dir/merkle_tree.cpp.o.d"
   "CMakeFiles/main.dir/mimc.cpp.o"
