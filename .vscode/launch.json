@@ -1,25 +1,25 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "C++ Debug",
-        "type": "cppdbg",
-        "request": "launch",
-        "program": "${workspaceFolder}/build/src/main",  // 你的可执行文件
-        "args": ["LENET", "32", "1", "2", "1"],  // 运行参数
-        "stopAtEntry": false,
-        "cwd": "${workspaceFolder}",
-        "environment": [],
-        "externalConsole": false,
-        "MIMode": "gdb",
-        "setupCommands": [
-          {
-            "description": "Enable pretty-printing for gdb",
-            "text": "-enable-pretty-printing",
-            "ignoreFailures": true
-          }
-        ]
-      }
-    ]
-  }
-  
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C++ Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/src/main", // 你的可执行文件
+      "args": ["LENET", "32", "1", "2", "1"], // 运行参数
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Build Debug" // 这里关联上面定义的构建任务
+    }
+  ]
+}
